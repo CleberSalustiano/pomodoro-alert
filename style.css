@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+#logo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+}
+
+#logo p {
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-right: 20rem;
+}
+
+#logo p span {
+  color: rgb(133, 49, 49);
+}
+
+#logo img {
+  width: 8rem;
+}
+
+#form {
+  background-color: rgb(255, 209, 209);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#form div {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(222, 176, 176, 0.493);
+  width: 50rem;
+  height: 40rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+#form div label {
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: rgb(133, 49, 49);
+}
+
+#form #timer {
+  font-size: 4rem;
+  margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: rgb(133, 49, 49);
+}
+
+#form div input,
+#form div button {
+  height: 4rem;
+  margin-bottom: 1rem;
+  border: 0.2rem solid rgb(212, 175, 200);
+  padding: 0 1.6rem;
+  background-color: rgb(240, 222, 222);
+  border-radius: 0.8rem;
+}
+
+#form div button {
+  width: 14rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(133, 49, 49);
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+#form div button:hover {
+  filter: brightness(1.05);
+}
+
+#form div input {
+  width: 28rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+#form div input::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+#form div.hidden {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}

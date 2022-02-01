@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Podemoro Alert</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <p>Pomodoro <span>Alert</span></p>
+        <img src="/assets/images/pomodoroLogo.png" alt="" />
+      </div>
+    </header>
+
+    <main>
+      <section id="form">
+        <div id="timer" class="hidden">
+          <p></p>
+          <audio src="assets/audios/alarme.mp3"></audio>
+          <button>Cancelar</button>
+        </div>
+
+        <div id="formSet">
+          <label for="total-time">Tempo de Estudo:</label>
+          <input
+            type="number"
+            id="total-time"
+            placeholder="Digite em minutos"
+          />
+
+          <label for="division-time">Tempo de foco total:</label>
+          <input
+            type="number"
+            id="focus-time"
+            placeholder="Digite em minutos"
+          />
+
+          <button>Começar</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
