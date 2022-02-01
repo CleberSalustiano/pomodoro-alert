@@ -73,6 +73,8 @@ function recursiveTimer(
         clearInterval(interval)
       } else {
         setTimeout(() => {
+          stick.currentTime = 0
+          alarm.play()
           setInterval(
             recursiveTimer(
               focusTime,
