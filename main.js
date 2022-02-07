@@ -4,8 +4,6 @@ function set() {
 
   if (totalTime.value === '') {
     window.alert('Preencha o campo "Tempo de Estudo"')
-  } else if (focusTime.value <= 24) {
-    focusTime.value = ''
   } else {
     focusTime = focusTime.value
     totalTime = totalTime.value
@@ -73,7 +71,7 @@ function recursiveTimer(
         clearInterval(interval)
       } else {
         setTimeout(() => {
-          stick.currentTime = 0
+          alarm.currentTime = 0
           alarm.play()
           setInterval(
             recursiveTimer(
@@ -86,7 +84,7 @@ function recursiveTimer(
               timer,
               alarm
             ),
-            1
+            1000
           )
         }, 300000)
         alarm.play()
