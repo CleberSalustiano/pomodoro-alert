@@ -1,6 +1,6 @@
 # Pomodoro Technique Program
 
-This is an application only Front-End Page, the objective's to create a pomodoro helper. When we use this technique is comun don't acert the time and sometimes we can't focus and that is really bad. So for this I made this project.
+This is an application only Front-End Page, the objective's to create a pomodoro helper. When we use this technique is common don't acert the time and sometimes we can't focus and that is really bad. So for this I made this project.
 
 ## For use
 
