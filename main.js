@@ -1,7 +1,12 @@
+const form = document.querySelector('#formSet')
+const timer = document.querySelector('#timer')
+const alarm = document.querySelector('#timer audio')
+let restTime = 300000
+
+let interval
 function set() {
   let totalTime = document.querySelector('#total-time')
   let focusTime = document.querySelector('#focus-time')
-
   if (totalTime.value === '') {
     window.alert('Preencha o campo "Tempo de Estudo"')
   } else {
@@ -15,9 +20,6 @@ function set() {
 }
 
 function start(total, focus) {
-  const form = document.querySelector('#formSet')
-  const timer = document.querySelector('#timer')
-  const alarm = document.querySelector('#timer audio')
   form.classList.add('hidden')
   timer.classList.remove('hidden')
   timer.querySelector('p').classList.remove('finish')
@@ -51,7 +53,7 @@ function recursiveTimer(
   timer,
   alarm
 ) {
-  let interval = setInterval(() => {
+  interval = setInterval(() => {
     let hour = parseInt((focusTime / 60 / 60) % 24, 10)
     let minute = parseInt((focusTime / 60) % 60, 10)
     let second = parseInt(focusTime % 60, 10)
@@ -86,7 +88,7 @@ function recursiveTimer(
             ),
             1000
           )
-        }, 300000)
+        }, restTime)
         alarm.play()
         timer.querySelector('p').textContent = 'Pause 5 minutos'
 
@@ -112,16 +114,21 @@ function print(focusTime, timer) {
   }
 }
 const buttonComeçar = document.querySelector('#form #formSet button')
-const alarm = document.querySelector('#timer audio')
 buttonComeçar.addEventListener('click', set)
 window.addEventListener('keydown', event => {
-  if (event.key === 'Enter') {
+  let isHidden = form.classList.value !== 'hidden'
+  if (event.key === 'Enter' && isHidden) {
     set()
+  }
+  if (event.key === 'Escape' || event.key == 'Enter') {
+    alarm.pause()
   }
 })
 
-window.addEventListener('keydown', event => {
-  if (event.key === 'Escape') {
-    alarm.pause()
-  }
+const cancel = document.querySelector('#cancel')
+
+cancel.addEventListener('click', () => {
+  clearInterval(interval)
+  form.classList.remove('hidden')
+  timer.classList.add('hidden')
 })
