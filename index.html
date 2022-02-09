@@ -21,32 +21,32 @@
       </div>
     </header>
 
-    <main>
-      <section id="form">
-        <div id="timer" class="hidden">
-          <p></p>
-          <audio src="assets/audios/alarme.mp3"></audio>
-          <button id="cancel">Cancelar</button>
-        </div>
+    <main id="form">
+      <div id="timer" class="hidden">
+        <p></p>
+        <audio src="assets/audios/alarme.mp3"></audio>
+        <button id="cancel">Cancelar</button>
+      </div>
 
-        <div id="formSet">
-          <label for="total-time">Tempo de Estudo:</label>
-          <input
-            type="number"
-            id="total-time"
-            placeholder="Digite em minutos"
-          />
+      <div id="formSet">
+        <label for="total-time">Tempo de Estudo:</label>
+        <input
+          type="number"
+          id="total-time"
+          placeholder="Digite em minutos"
+          title="Digite o tempo total de estudo disponível."
+        />
 
-          <label for="division-time">Tempo de foco total:</label>
-          <input
-            type="number"
-            id="focus-time"
-            placeholder="Digite em minutos"
-          />
+        <label for="focus-time">Tempo de foco total:</label>
+        <input
+          type="number"
+          id="focus-time"
+          placeholder="Digite em minutos"
+          title="Digite o tempo que você consegue manter o foco total."
+        />
 
-          <button>Começar</button>
-        </div>
-      </section>
+        <button>Começar</button>
+      </div>
     </main>
 
     <script src="main.js"></script>
