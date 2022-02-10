@@ -114,6 +114,7 @@ function print(focusTime, timer) {
   }
 }
 const buttonComeçar = document.querySelector('#form #formSet button')
+const page = document.querySelector('html')
 buttonComeçar.addEventListener('click', set)
 window.addEventListener('keydown', event => {
   let isHidden = form.classList.value !== 'hidden'
@@ -131,4 +132,11 @@ cancel.addEventListener('click', () => {
   clearInterval(interval)
   form.classList.remove('hidden')
   timer.classList.add('hidden')
+})
+
+page.addEventListener('keydown', event => {
+  if (event.key === ' ') {
+    page.classList.toggle('dark')
+  }
+  console.log(event.key)
 })

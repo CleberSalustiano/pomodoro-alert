@@ -17,6 +17,10 @@
   --shadown-input: hsl(var(--hue) 46% 62%);
 }
 
+:root.dark {
+  --hue: 250;
+}
+
 input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
